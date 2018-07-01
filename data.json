@@ -1,0 +1,10 @@
+[
+	{ 
+		"question" : "Which company do you think is the greates?",
+		"answears" : ["odp1","odp2","odp3", "odp4"]
+	},
+	{ 
+		"question" : "Which is the greates?",
+		"answears" : ["odpA","odpB","odpC"]
+	}	
+]
