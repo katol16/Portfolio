@@ -1,0 +1,807 @@
+@font-face {
+	font-family: "Roboto";
+	src: url("../fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+	font-family: "Roboto-light";
+	src: url("../fonts/Roboto-Light.ttf");
+}
+
+@font-face {
+	font-family: "Roboto-bold";
+	src: url("../fonts/Roboto-Bold.ttf");
+}
+
+@font-face {
+	font-family: "Bahiana";
+	src: url("../fonts/Bahiana-Regular.ttf");
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+	background-image: url("../images/bg.jpg");
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-color: #f7f8f8;
+	font-family: "Roboto";
+    position: relative;
+    margin: 0;
+    padding-bottom: 6rem;
+    min-height: 100%;
+}
+
+/*UWAGA! body i .postBody, mają różne sposoby na wyświetlanie bg-img. 
+Pogadaj z przemem i bartkiem, który lepiej wygląda.
+Zastanów się czy nie lepiej korzystać z jednego bg, np. tego na stronie głównej*/
+
+.postBody {
+	background-image: url("../images/bg-post.png");	
+	background-size: auto;
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-attachment: initial;
+}
+
+a, a:hover {
+	color: inherit; /* blue colors for links too */
+	text-decoration: inherit; /* no underline */
+	cursor: pointer;
+}
+
+.menu {
+    background-color: transparent;
+    border: none;
+    margin-bottom: 140px;
+}
+
+@media only screen and (max-width: 1170px) {
+	.menu  {
+		margin-bottom: 20px;
+	} 
+}
+
+.container > .navbar-header, .container-fluid > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+@media only screen and (max-width: 768px) {
+	.navbar-collapse {
+	    background-color: #f7f8f8;
+	    width: 100%;
+	}
+}
+
+@media only screen and (max-width: 1170px) {
+	.container {
+		margin-left: 0px;
+		margin-right: none;
+	}
+}
+
+.navbar-collapse, .container {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.navbar-collapse, .container {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.menu--post {
+    margin-bottom: 0px;
+}
+
+.menuCollapse {
+	text-align: center;
+}
+
+.menuCollapse--left {
+	float: left;
+}
+
+.menuCollapse__list {
+	display: inline-block;
+	float: none;
+	vertical-align: top;
+	font-size: 12px;
+	margin-top: 30px;
+}
+
+.menuCollapse__listLink {
+	color: #65848f !important;
+	box-sizing: border-box;
+}
+
+.menuCollapse__listLink--first {
+	display: block;
+	background-color: #fff;
+	font-family: "Bahiana";
+	font-size: 21px;
+}
+
+.menuCollapse__listItem:hover {
+	background-color: #65848f;
+}
+
+.menuCollapse__listLink:hover {
+	color: #fff!important;
+}
+
+.row {
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 1170px;
+}
+
+@media only screen and (max-width: 1170px) {
+	/* jeszcze się zastanó czy trzeba ten margines*/
+	.row {
+		margin-right: 10px;
+		margin-left: 10px;
+	}
+	.row-footer {
+		margin-right: 0px;
+		margin-left: 0px;
+	}
+}
+
+header {
+	margin-bottom: 140px;
+}
+
+@media only screen and (max-width: 1170px) {
+	header  {
+		margin-bottom: 40px;
+	} 
+}
+
+.post {
+	margin-bottom: 0px;
+}
+
+.header__title {
+	font-size: 57px;
+	color: #fff;
+	font-family: "Bahiana";
+	text-transform: uppercase;
+	text-align: center;
+}
+
+main {
+	height: 100%;
+	margin-bottom: 50px;
+}
+
+.socialMedia {
+	margin-top: 20px;
+	position: static;
+	height: 100%;
+/*	background: rgba(255,255,255,0.7);*/
+	background-color: #fff;
+	float: right;
+	border-left: 10px solid rgba(255,255,255,0);
+	background-clip: padding-box;
+	box-sizing: border-box;
+}
+
+@media only screen and (max-width: 768px) { 
+	.socialMedia {
+		margin-right: auto;
+		margin-left: auto;
+		width: 220px;
+		float: none;
+		clear: both;
+		text-align: center;
+		position: static;
+		border-top: 20px solid rgba(255,255,255,0);
+		background-clip: padding-box;
+		box-sizing: border-box;
+		border-left: 0px;
+	} 
+}
+
+@media only screen and (max-width: 1170px) { 
+	.socialMedia--mainSite {
+		margin-right: auto;
+		margin-left: auto;
+		width: 220px;
+		float: none;
+		clear: both;
+		text-align: center;
+		position: static;
+		border-top: 20px solid rgba(255,255,255,0);
+		background-clip: padding-box;
+		box-sizing: border-box;
+		border-left: 0px;
+	} 
+}
+
+.socialMedia__title, .socialMedia__popular  {
+	font-size: 25px;
+	color: #7c7c7c;
+	font-family: "Bahiana";
+	padding: 10px 10px;
+	width:100%;
+}
+
+.socialMedia__popular  {
+	padding: 10px 10px 0px 10px;
+}
+
+.socialMedia__list {
+	font-size: 12px;
+	color: #7c7c7c;
+	list-style-type: none;
+	padding: 0px 10px;
+	font-family: "Roboto-bold";
+}
+
+.socialMedia__listItem {
+	padding-bottom: 10px;
+	padding-top: 10px;
+	border-bottom: 1px solid #e8e8e8;
+}
+
+.socialMedia__listItem:last-child {
+	border-bottom: none;
+}
+
+.socialMedia__listItemDate {
+	font-size: 10px;
+	color: #7c7c7c;
+	font-family: "Roboto";
+}
+
+.postContainer {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.postBox {
+	height: 100%;
+	background-color: #fff;
+	margin-top: 20px;
+	padding: 0px;
+}
+
+.postBox__left {
+	height: 587px;
+	background-image: url("../images/norway-bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 578px) {
+	.postBox__left  {
+		height: 200px;
+	} 
+}
+
+.postBox__right {
+	height: 587px;
+	padding: 0px;	
+	display: inline-block;
+	position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+	.postBox__right {
+		height: 100%;
+		padding-bottom: 120px;
+	} 
+}
+
+.postBox__country {
+	font-family: "Bahiana";
+	font-size: 42px;
+	color: #fff;
+	background-color: #e8a71c;
+	padding: 6px 18px 6px 18px;
+	display: inline-block;
+	letter-spacing: 6px;
+	line-height: 42px;
+}
+
+.postBox__title {
+	font-family: "Bahiana";
+	font-size: 46px;
+	color: #4c4b4b;
+	display: inline-block;
+	margin-top: 55px;
+	margin-left: 45px;
+}
+
+@media only screen and (max-width: 578px) {
+	.postBox__title {
+		margin-top: 20px;
+		margin-left: 20px;
+		margin-right: 10px;
+	}
+}
+
+.postBox__txt {
+	font-family: "Roboto";
+	font-size: 12px;
+	color: #4c4b4b;
+	display: inline-block;
+	margin-top: 25px;
+	margin-left: 45px;
+	margin-right: 25px;
+	margin-bottom: 20px;
+	line-height: 23px;
+}
+
+@media only screen and (max-width: 578px) {
+	.postBox__txt {
+		margin-top: 5px;
+		margin-left: 20px;
+		margin-right: 20px;
+		margin-bottom: 0px;
+	}
+}
+
+.postBox__btn {
+	font-family: "Roboto-bold";	
+	font-size: 12px;
+	background-color: #fff;
+	color: #4c4b4b;
+	border: none;
+	position: absolute;
+	bottom: 30px;
+	right: 25px;
+	height: 40px;
+	padding-left: 20px;
+	padding-right: 20px;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+
+}
+
+@media only screen and (max-width: 578px) {
+	.postBox__btn {
+		right: 15px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+.postBox__btn:hover {
+	border: 1px solid #4c4b4b;
+	border-radius: 20px;
+}
+
+.postBox__likeBtn, .postBox__commentBtn {
+	font-family: "Roboto";	
+	font-size: 12px;
+	background-color: #fff;
+	color: #ababab;
+	border: none;
+	position: absolute;
+	bottom: 40px;
+	left: 40px;
+}
+
+.postBox__likeBtn {
+	bottom: 80px;
+}
+
+@media only screen and (max-width: 578px) {
+	.postBox__likeBtn, .postBox__commentBtn {
+		bottom: 15px;
+		left: 15px;
+	}
+	.postBox__likeBtn {
+		bottom: 60px;
+	}
+}
+
+.postBox__likeBtn:hover {
+	color: #4c4b4b;
+	font-family: "Roboto-bold";	
+}
+
+.postBox__likeBtn:hover > .fa-thumbs-up {
+	color: rgba(59,89,152,1);
+}
+
+.postBox__commentBtn:hover {
+	color: #4c4b4b;
+	font-family: "Roboto-bold";	
+}
+
+.postBox--small {
+	max-width: 670px;
+	height: 100%;
+	margin-left: 5px;
+	background-color: #fff;
+	margin-top: 20px;
+}
+
+@media only screen and (max-width: 1170px) {
+	.postBox--small {
+		float: left;
+		margin-left: 0px;
+	}
+}
+
+.postHeader {
+	width: 100%;
+	height: 251px;
+	background-image: url("../images/norway-bg.jpg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	text-align: center;
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.galleryBox {
+	height: 270px;
+	float: left;
+	padding-left: 0px;
+	margin: 20px 0px 0px 0px;
+	padding-right: 0px;
+}
+
+@media only screen and (max-width: 557px) {
+	.galleryBox {
+		display: none;
+	}
+}
+
+.galleryBox__btn {
+	display: none;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-family: "Roboto-bold";	
+	font-size: 12px;
+	background-color: #fff;
+	color: #4c4b4b;
+	border: 1px solid #4c4b4b;
+	border-radius: 20px;
+	height: 40px;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.galleryBox__btn:hover {
+	background-color: #f1f1f1;
+	border: 1px solid #f1f1f1;
+}
+
+@media only screen and (max-width: 557px) {
+	.galleryBox__btn {
+		display: flex;
+	}
+}
+
+.galleryBox__img {
+	min-height: 127px;
+	display: block;
+	background-image: url('../../posts/norway/1.jpg');
+	background-size: cover;
+	border-right: 10px solid rgba(255,255,255,0);
+	border-bottom: 10px solid rgba(255,255,255,0);
+	background-clip: padding-box;
+	box-sizing: border-box;
+}
+
+.galleryBox__img:nth-of-type(2) {
+	background-image: url('../../posts/norway/2.jpg');
+}
+.galleryBox__img:nth-of-type(3) {
+	background-image: url('../../posts/norway/3.jpg');
+}
+.galleryBox__img:nth-of-type(4) {
+	background-image: url('../../posts/norway/4.jpg');
+}
+.galleryBox__img:nth-of-type(5) {
+	background-image: url('../../posts/norway/5.jpg');
+}
+.galleryBox__img:nth-of-type(6) {
+	background-image: url('../../posts/norway/6.jpg');
+}
+.galleryBox__img:nth-of-type(7) {
+	background-image: url('../../posts/norway/7.jpg');
+}
+.galleryBox__img:nth-of-type(8) {
+	background-image: url('../../posts/norway/8.jpg');
+}
+
+footer {
+	height: 65px;
+	margin-top: 50px;
+	background-color: #282828;
+}
+
+.fa-instagram, .fa-fb {
+	width: 30px;
+	height: 30px;
+	border-radius: 20px;
+	background-color: #6d6d6d;
+	color: #282828;
+	padding-left: 8px;
+	padding-top: 4px;
+	font-size: 24px !important;
+}
+
+.fa-instagram:hover, .fa-fb:hover {
+	width: 30px;
+	height: 30px;
+	border-radius: 20px;
+	background-color: rgba(59,89,152,1);
+	color: #fff;
+	padding-left: 8px;
+	padding-top: 4px;
+	cursor: pointer;
+}
+
+.fa-instagram {
+	padding-left: 6px;
+	padding-top: 4px;
+	font-size: 22px !important;
+}
+
+.fa-instagram:hover {
+	padding-left: 6px;
+	padding-top: 4px;
+	background-color: white;
+	color: black;
+}
+
+.fa-angle-right {
+	background-color: transparent;
+	color: #282828;
+	font-size: 36px !important;
+	padding-left: 15px;
+	margin-top: -5px;
+}
+
+.arrow-left, .arrow-right  {
+	padding-left: 0px;
+	margin-top: 0px;
+	background-color: transparent;
+	color: #fff;
+	font-size: 36px !important;
+	width: 5%;
+	text-align: center;
+	cursor: pointer;
+}
+
+.fa-times {
+	position: absolute;
+	top: 10px;
+	right: 12px;
+	background-color: transparent;
+	color: #fff;
+	font-size: 26px !important;
+	width: 5%;
+	text-align: right;
+	cursor: pointer;	
+}
+
+.menuIcon {
+	color: #fff;
+	background-color: #e0e0e0;
+	margin-left: 10px;
+	float: left;
+	text-align: left;
+	margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 1170px) {
+	.socialMedia__icons {
+		margin-right: auto;
+		margin-left: auto;
+		width: 90px;
+		text-align: center;
+	} 
+}
+
+.menuIcon--instagram:hover {
+	background-color: red;
+	background-color: #9d9d9d;
+}
+
+.bigFont {
+	font-size: 21px;
+	font-family: "Bahiana";
+	color: #7ca3b2;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+.author {
+	text-align: right;
+	font-size: 11px;
+	padding-right: 9px;
+	margin-top: 10px;
+}
+
+.author__name {
+	font-family: "Bahiana";
+	font-size: 21px;
+	background-color: #fff;
+	color: #7ca3b2;
+	padding: 5px 10px 5px 10px;
+	margin-left: 10px;
+}
+
+.morePosts {
+	background-color: #fff;
+	padding: 10px 5px 10px 5px;
+	box-sizing: border-box;
+}
+
+.morePosts__post {
+	height: 100px;
+	background-color: red;
+	border-right: 5px solid #fff;
+	border-left: 5px solid #fff;
+	box-sizing: border-box;
+}
+
+.galleryHeader {
+	text-align: center;
+	font-size: 41px;
+	font-family: "Bahiana";
+	color: #7ca3b2;
+}
+
+.postBox__galleryContainer {
+	border: 5px solid #fff;
+	box-sizing: border-box;
+}
+
+.postBox--gallery {
+	height: 200px;
+	background-image: url("../images/norway-bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    border: 5px solid #fff;
+    justify-content: center;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 420px) {
+	.postBox--gallery {
+		width: 100%;
+	}
+}
+
+.postBox__galleryTxt {
+	font-family: "Bahiana";
+	font-size: 21px;
+	position: absolute;
+	bottom: -30px;
+	background-color: #f7f8f8;
+	height: 30px;
+	width: 100%;
+	left: 0px;
+}
+
+.postBox__country--gallery {
+	font-family: "Bahiana";
+	font-size: 22px;
+	color: #fff;
+	background-color: #e8a71c;
+	padding: 6px 18px 6px 18px;
+	display: inline-block;
+	letter-spacing: 6px;
+	line-height: 22px;
+}
+
+footer {
+	position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.row-footer {
+	background-color: #282828;
+}
+
+.footerList {
+	list-style-type: none;
+	color: #fff;
+	font-family: "Roboto-light";
+	padding-top: 14px;
+	float: left;
+	-webkit-padding-start: 0px;
+	background-color: #282828;
+}
+
+@media only screen and (max-width: 1170px) {
+	.footerList{
+		margin-left: 10px;
+	} 
+}
+
+
+.footerList--right {
+	float: right;
+}
+
+.footerList--right .footerList__item {
+	padding-top: 8px;
+}
+
+.footerList__item--bold {
+	font-family: "Roboto-bold";
+}
+
+.footerList__itemTxt {
+	margin-right: 15px;
+}
+
+.footerList__item {
+	float: left;
+	margin-right: 10px;
+}
+
+.footerList__itemTxt {
+	font-family: "Bahiana";
+	font-size: 21px;
+}
+
+aside {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	display: none;
+  	justify-content: center;
+  	align-items: center;
+	top: 0px;
+	left: 0px;
+	background: rgba(0,0,0,0.8);
+}
+
+.galleryImg {
+	width: 90%;
+}
+
+/*.socialSticky {
+	position: fixed;
+	margin-top: 0px;
+}*/
